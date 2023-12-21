@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: black;
+}
+
+.headingPrimary {
+  font-size: 8rem;
+  width: 80%;
+  font-family: "Great Vibes", cursive;
+}
+
+/* Styling for home page */
+.container {
+  max-width: 100%;
+}
+
+.homePage {
+  max-width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./img/homePageBg.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3rem;
+}
+
+.inner-container {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
+}
+
+.name {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 8rem;
+  gap: 15px;
+  color: white;
+  font-weight: 600;
+}
+
+.gName {
+  animation: FromLeft 3s;
+  font-size: 9rem;
+  font-family: "Great Vibes", cursive;
+}
+
+.emoji {
+  animation: emoji 3s;
+}
+
+.bName {
+  font-size: 9rem;
+  animation: FromRight 3s;
+  font-family: "Great Vibes", cursive;
+}
+
+.inner-container p {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  font-weight: lighter;
+  color: white;
+  animation: para 3s;
+}
+
+.timeLeft {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  animation: timeBubble 3s;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 17rem;
+  height: 17rem;
+  border: 3px solid cyan;
+  border-radius: 50%;
+  font-size: 3rem;
+  color: white;
+}
+
+.time div {
+  font-size: 6rem;
+}
+
+/* Styling for about page */
+.about {
+  color: white;
+  margin: 0 auto 3rem;
+  text-align: center;
+  padding: 3rem;
+  max-width: 100%;
+  background-color: red;
+  height: fit-content();
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./img/AboutPageBg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about h1 {
+  font-size: 5rem;
+  font-family: "Great Vibes", cursive;
+}
+
+.heart-design {
+  font-size: 3rem;
+  display: inline;
+  position: relative;
+}
+
+.heart-design::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 150%;
+  width: 300%;
+  height: 2px;
+  background-color: rgb(254, 70, 70);
+}
+
+.heart-design::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 150%;
+  width: 300%;
+  height: 2px;
+  background-color: rgb(254, 70, 70);
+}
+
+.about-info {
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: fit-content();
+  gap: 5rem;
+}
+
+.about-info h2 {
+  font-size: 4rem;
+  letter-spacing: 0;
+  font-family: "Great Vibes", cursive;
+}
+
+.groom {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  flex: 1;
+  background-color: rgb(112, 196, 206);
+}
+
+.groom span {
+  font-size: 3rem;
+  letter-spacing: 10px;
+}
+
+.groom p {
+  font-size: 2rem;
+  margin-top: -2rem;
+  letter-spacing: 0;
+  justify-self: flex-end;
+  letter-spacing: 5px;
+}
+
+.g-img {
+  width: 30rem;
+  height: 30rem;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.g-img {
+  background-image: url("/img/Groom.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.g-img:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("./img//Groom.jpg");
+
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.g-info {
+  font-size: 2rem;
+  line-height: 1.3;
+  letter-spacing: 0px;
+}
+
+.bride {
+  background-color: rgb(183, 74, 74);
+}
+
+.b-img {
+  background-image: url("./img/Bride.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.b-img:hover {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("./img/Bride.jpg");
+
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.follow-icons {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 100%;
+  gap: 2rem;
+  font-size: 5rem;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.follow-icons a {
+  text-decoration: none;
+  color: black;
+}
+
+.b-img:hover .follow-icons,
+.g-img:hover .follow-icons {
+  left: 50%;
+  opacity: 1;
+}
+
+/* Styling for people section starts here */
+.people {
+  color: white;
+  margin: 0 auto 3rem;
+  text-align: center;
+  padding: 3rem;
+  max-width: 100%;
+  background-color: red;
+  height: fit-content();
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./img/homePageBg.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.people-heart-design {
+  margin-top: -3rem;
+}
+
+.people h1 {
+  font-size: 5rem;
+  font-family: "Great Vibes", cursive;
+}
+
+.people p {
+  font-size: 2rem;
+  width: 80%;
+  line-height: 1.3;
+}
+
+.g-people,
+.b-people {
+  height: 45rem;
+  overflow-y: scroll;
+  flex: 1;
+  gap: 0rem;
+  padding: 0;
+  position: relative;
+}
+
+.g-people {
+  background-color: rgb(255, 70, 70);
+}
+
+.b-people {
+  background-color: cyan;
+}
+
+.people-innerContainer {
+  color: white;
+  padding-top: 2rem;
+  width: 100%;
+  height: fit-content();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.g-people-img,
+.b-people-img {
+  width: 25rem;
+  height: 25rem;
+  background-color: black;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.people-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.people-title {
+  color: black;
+  padding-top: 1rem;
+  letter-spacing: 0 !important;
+  color: white;
+}
+
+/* Styling for wedding section */
+.wedding {
+  color: white;
+  margin: 0 auto 3rem;
+  text-align: center;
+  padding: 3rem;
+  max-width: 100%;
+  background-color: red;
+  height: fit-content();
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./img/AboutPageBg.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.wedding h1 {
+  font-size: 5rem;
+  font-family: "Great Vibes", cursive;
+}
+
+.wedding-heart-design {
+  margin-top: -3rem;
+}
+
+.wedding p {
+  max-width: 40%;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.wedding-details {
+  margin: 2rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 80%;
+}
+
+.function {
+  padding: 3rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  background-color: white;
+}
+
+.wedding-details-title {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color: rgb(254, 70, 70);
+}
+
+.wedding-details-time {
+  font-size: 2.5rem;
+  color: black;
+  font-family: "Great Vibes", cursive;
+}
+
+.wedding-details-loc-marker {
+  font-size: 3rem;
+  color: rgb(254, 70, 70);
+}
+
+.wedding-details-location {
+  color: black;
+  font-size: 2rem;
+}
+
+.wedding h3 {
+  font-size: 4rem;
+  position: relative;
+}
+
+.wedding h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  width: 40%;
+  height: 2px;
+  background-color: rgb(254, 70, 70);
+}
+
+.wedding h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 110%;
+  width: 40%;
+  height: 2px;
+  background-color: rgb(254, 70, 70);
+}
+
+.map {
+  width: 80%;
+  height: fit-content();
+}
+
+.location {
+  width: 100%;
+}
+
+.wedding-timeLeft {
+  margin: 0;
+}
+
+/* Styling for gallery section */
+.gallery {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+  max-width: 100%;
+  background-color: red;
+  height: fit-content();
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./img/AboutPageBg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery h1 {
+  font-size: 5rem;
+  font-family: "Great Vibes", cursive;
+}
+
+.box {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.dream {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.dream img {
+  width: 100%;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+@media all and (max-width: 850px) {
+  html {
+    font-size: 55%;
+  }
+
+  .homePage {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("./img/TabBg.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .wedding p {
+    max-width: 70%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .timeLeft {
+    flex-wrap: wrap;
+  }
+
+  .inner-container {
+    padding: 3rem 0;
+  }
+
+  .about {
+    height: fit-content();
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .people-container {
+    flex-direction: column;
+    height: 90rem;
+  }
+
+  .g-people,
+  .b-people {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+
+  .dream {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .name {
+    font-size: 7rem;
+    flex-direction: column;
+  }
+
+  .inner-container p {
+    margin-top: 2rem;
+    letter-spacing: 5px;
+    font-size: 2rem;
+  }
+
+  .inner-container {
+    gap: 0rem;
+  }
+
+  .time div {
+    font-size: 5rem;
+  }
+
+  .wedding p {
+    max-width: 100%;
+  }
+
+  .people p {
+    width: 100%;
+    line-height: 1.1;
+  }
+}
+
+@media all and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  .name {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about {
+    padding: 1rem;
+  }
+
+  .about-info {
+    display: block;
+    width: 80%;
+  }
+
+  .groom {
+    margin-bottom: 3rem;
+  }
+
+  .g-people-img,
+  .b-people-img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .people-innerContainer {
+    padding: 0;
+    padding-top: 3rem;
+  }
+
+  .g-people,
+  .b-people {
+    height: 38rem;
+  }
+}
+
+@media all and (max-width: 368px) {
+  .timeLeft {
+    gap: 10px;
+  }
+
+  .time {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .time div {
+    font-size: 4rem;
+  }
+
+  .time span {
+    font-size: 2rem;
+  }
+
+  .g-people,
+  .b-people {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 280px) {
+  html {
+    font-size: 45%;
+  }
+  .timeLeft {
+    gap: 5px;
+  }
+}
+
+/* Code for animation */
+@keyframes FromLeft {
+  from {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes emoji {
+  from {
+    opacity: 0;
+    scale: 2.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes FromRight {
+  from {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes para {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes timeBubble {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
