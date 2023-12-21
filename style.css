@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 html {
@@ -58,19 +59,26 @@ html {
 }
 
 .gName {
-  animation: FromLeft 3s;
   font-size: 9rem;
   font-family: "Great Vibes", cursive;
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
+  padding: 5px;
+  transform: translateX(-100%);
 }
 
 .emoji {
-  animation: emoji 3s;
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
 }
 
 .bName {
   font-size: 9rem;
-  animation: FromRight 3s;
   font-family: "Great Vibes", cursive;
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
+  transform: translateX(100%);
+  padding: 5px;
 }
 
 .inner-container p {
@@ -87,7 +95,9 @@ html {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  animation: timeBubble 3s;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
 }
 
 .time {
@@ -176,6 +186,9 @@ html {
   gap: 3rem;
   flex: 1;
   background-color: rgb(112, 196, 206);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 
 .groom span {
@@ -227,6 +240,9 @@ html {
 
 .bride {
   background-color: rgb(183, 74, 74);
+  transform: translate(100%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 
 .b-img {
@@ -273,94 +289,6 @@ html {
   opacity: 1;
 }
 
-/* Styling for people section starts here */
-.people {
-  color: white;
-  margin: 0 auto 3rem;
-  text-align: center;
-  padding: 3rem;
-  max-width: 100%;
-  background-color: red;
-  height: fit-content();
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./img/homePageBg.jpeg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-}
-
-.people-heart-design {
-  margin-top: -3rem;
-}
-
-.people h1 {
-  font-size: 5rem;
-  font-family: "Great Vibes", cursive;
-}
-
-.people p {
-  font-size: 2rem;
-  width: 80%;
-  line-height: 1.3;
-}
-
-.g-people,
-.b-people {
-  height: 45rem;
-  overflow-y: scroll;
-  flex: 1;
-  gap: 0rem;
-  padding: 0;
-  position: relative;
-}
-
-.g-people {
-  background-color: rgb(255, 70, 70);
-}
-
-.b-people {
-  background-color: cyan;
-}
-
-.people-innerContainer {
-  color: white;
-  padding-top: 2rem;
-  width: 100%;
-  height: fit-content();
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.g-people-img,
-.b-people-img {
-  width: 25rem;
-  height: 25rem;
-  background-color: black;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-
-.people-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.people-title {
-  color: black;
-  padding-top: 1rem;
-  letter-spacing: 0 !important;
-  color: white;
-}
-
 /* Styling for wedding section */
 .wedding {
   color: white;
@@ -390,6 +318,26 @@ html {
   margin-top: -3rem;
 }
 
+.wedding-gName {
+  transform: translateX(0%) !important;
+  opacity: 1 !important;
+  transition: all 0.8s ease-in-out !important;
+  padding: 5px;
+}
+
+.wedding-emoji {
+  transform: translateX(0%) !important;
+  opacity: 1 !important;
+  transition: all 0.8s ease-in-out !important;
+}
+
+.wedding-bName {
+  transform: translateX(0%) !important;
+  opacity: 1 !important;
+  transition: all 0.8s ease-in-out !important;
+  padding: 5px;
+}
+
 .wedding p {
   max-width: 40%;
   line-height: 1.3;
@@ -413,6 +361,23 @@ html {
   flex-wrap: nowrap;
   gap: 1.5rem;
   background-color: white;
+}
+
+.mhendi {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.haldi {
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.marriage {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
 }
 
 .wedding-details-title {
@@ -446,7 +411,7 @@ html {
   content: "";
   position: absolute;
   top: 50%;
-  left: 110%;
+  left: 1%;
   width: 40%;
   height: 2px;
   background-color: rgb(254, 70, 70);
@@ -469,10 +434,8 @@ html {
 
 .location {
   width: 100%;
-}
-
-.wedding-timeLeft {
-  margin: 0;
+  transform: scale(0);
+  transition: all 0.8s linear;
 }
 
 /* Styling for gallery section */
@@ -500,12 +463,16 @@ html {
   margin-top: 5rem;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transition: all 0.8s linear;
 }
 
 .dream {
   display: flex;
   flex-direction: column;
   width: 32.5%;
+  transform: scale(0);
+  transition: all 0.8s linear;
 }
 
 .dream img {
@@ -671,38 +638,18 @@ html {
 }
 
 /* Code for animation */
-@keyframes FromLeft {
-  from {
-    transform: translateX(-150px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+.animate-gName {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
-@keyframes emoji {
-  from {
-    opacity: 0;
-    scale: 2.5;
-  }
-
-  to {
-    opacity: 1;
-    scale: 1;
-  }
+.animate-bName {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
-@keyframes FromRight {
-  from {
-    transform: translateX(150px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+.animate-emoji {
+  opacity: 1;
 }
 
 @keyframes para {
@@ -714,13 +661,29 @@ html {
   }
 }
 
-@keyframes timeBubble {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.animate-map {
+  transform: scale(1);
+}
+
+.animate-timeLeft {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.animate-groom {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.animate-bride {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.animate-box {
+  opacity: 1;
+}
+
+.animate-dream {
+  transform: scale(1);
 }
