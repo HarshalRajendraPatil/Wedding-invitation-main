@@ -32,7 +32,7 @@ if (homeSec.classList.contains("show-animate")) {
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
+    let offset = sec.offsetTop - 100;
     let height = sec.offsetHeight;
 
     if (top >= offset && top < offset + height) {
@@ -107,8 +107,4 @@ setInterval(function () {
   hour[0].textContent = getTime[1];
   minute[0].textContent = getTime[2];
   second[0].textContent = getTime[3];
-  day[1].textContent = getTime[0];
-  hour[1].textContent = getTime[1];
-  minute[1].textContent = getTime[2];
-  second[1].textContent = getTime[3];
 }, 1000);
